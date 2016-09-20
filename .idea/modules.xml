@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TwitchApp.iml" filepath="$PROJECT_DIR$/.idea/modules/TwitchApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TwitchApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TwitchApp_main.iml" group="TwitchApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TwitchApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TwitchApp_test.iml" group="TwitchApp" />
+    </modules>
+  </component>
+</project>

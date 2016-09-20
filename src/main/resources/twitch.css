@@ -1,0 +1,47 @@
+.root {
+    -fx-control-inner-background: rgb(141, 141, 141);
+    -fx-background-color: #3b3b3b;
+    -fx-base: rgb(147, 146, 150);
+    -fx-text-fill: white;
+}
+
+.list-view{
+    -fx-border-color: #000000;
+}
+
+#setting {
+    -fx-text-fill: #c9c9c9;
+}
+
+.list-cell{
+    -fx-cell-size: 46;
+}
+
+.list-cell:selected {
+    -fx-text-fill: white;
+}
+
+.list-cell:odd {
+    -fx-background-color: #676767;
+}
+
+.list-cell:even {
+    -fx-background-color: #939296;
+}
+
+.button {
+    -fx-background-color: #6b6a6e;
+    -fx-font-weight: bold;
+}
+
+.exit {
+    -fx-background-color: #96000a;
+}
+
+.title {
+    -fx-background-color: #8d8d8d;
+    -fx-text-fill: #d0d0d0;
+    -fx-font-size: 15;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+}

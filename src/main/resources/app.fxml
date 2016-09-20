@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@twitch.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_RIGHT" spacing="5.0">
+         <children>
+            <Button fx:id="refresh" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="25.0" text="Refresh" />
+            <Button fx:id="settingBtn" mnemonicParsing="false" text="Settings" />
+            <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <Button fx:id="minimize" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="min" text="-" />
+            <Button fx:id="exit" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="exit" text="X" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="12.0" right="12.0" top="8.0" />
+         </padding>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="2.0" />
+         </padding>
+         <children>
+            <VBox prefHeight="200.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="32.0" styleClass="title" text="Followed">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="followedStreamsList">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ListView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0">
+               <children>
+                  <Label fx:id="topGame" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="32.0" styleClass="title" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <ListView fx:id="topStreamsList">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ListView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
