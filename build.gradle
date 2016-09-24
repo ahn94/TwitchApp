@@ -4,15 +4,22 @@ version '1.0-SNAPSHOT'
 buildscript {
     dependencies {
         classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.5.1'
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.9"
     }
 
     repositories {
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 }
 
+
+apply plugin: "net.ltgt.apt"
 apply plugin: 'java'
 apply plugin: 'idea'
+
 
 repositories {
     mavenCentral()
@@ -23,12 +30,20 @@ dependencies{
     // compile files("${System.properties['java.home']}/../lib/packager.jar")
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
     compile 'org.apache.httpcomponents:fluent-hc:4.3.+'
-    compile 'com.google.code.gson:gson:1.7.2'
-    compile 'com.github.scribejava:scribejava-apis:2.8.1'
     compile 'org.apache.commons:commons-lang3:3.3.+'
     compile fileTree(dir: 'lib', include: '*.jar')
 
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     compile 'org.controlsfx:controlsfx:8.40.11'
+    compile 'io.reactivex:rxjavafx:+'
+    compile 'io.reactivex:rxjava:1.0.0-rc.9'
+    compile 'com.squareup.okhttp3:logging-interceptor:+'
+
+    compile 'com.google.dagger:dagger:2.5'
+    apt 'com.google.dagger:dagger-compiler:2.5'
 }
 
 apply plugin: 'javafx-gradle-plugin'

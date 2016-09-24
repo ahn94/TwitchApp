@@ -1,4 +1,5 @@
-import View.AppController;
+package View;
+
 import dagger.Component;
 
 import javax.inject.Singleton;

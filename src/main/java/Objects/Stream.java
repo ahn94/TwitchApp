@@ -12,7 +12,7 @@ public class Stream {
 
     @SerializedName("_id")
     @Expose
-    public Integer id;
+    public Long id;
     @SerializedName("game")
     @Expose
     public String game;

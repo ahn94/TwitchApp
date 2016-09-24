@@ -1,3 +1,5 @@
+package View;
+
 import Domain.TwitchApi;
 import dagger.Module;
 import dagger.Provides;

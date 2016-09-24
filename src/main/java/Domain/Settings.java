@@ -25,12 +25,19 @@ import java.util.List;
  */
 public class Settings {
 
+    public static final String CLIENT_ID = "aaexx7qumq1mqaam3eqyu12ss0a38q0";
+    public static final String AUTH_URL = "https://api.twitch.tv/kraken/oauth2/authorize?response_type=token"
+            + "&client_id=" + CLIENT_ID
+            + "&redirect_uri=http://localhost/twitch_oauth"
+            + "&scope=user_read";
+
     private static Logger log = (Logger) LogManager.getLogger(Settings.class.getName());
 
     private static final Path SETTINGS_DIR;
     private static final Path SETTINGS_FILE;
     private static Settings instance;
     private final static Gson mapper;
+
     private List<String> games = new ArrayList<>();
 
     @SerializedName("authToken")
@@ -49,6 +56,7 @@ public class Settings {
 
     static {
         mapper = new GsonBuilder()
+                .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(SimpleIntegerProperty.class, new IntegerPropertyDeserializer())
                 .registerTypeAdapter(SimpleBooleanProperty.class, new BooleanPropertyDeserializer())
                 .registerTypeAdapter(SimpleBooleanProperty.class, new BooleanPropertySerializer())
@@ -72,7 +80,6 @@ public class Settings {
             Files.createDirectories(SETTINGS_DIR);
             try {
                 String json = new String(Files.readAllBytes(SETTINGS_FILE));
-                log.debug(json);
                 instance = mapper.fromJson(json, Settings.class);
             } catch (IOException e) {
                 System.out.println("caught");
